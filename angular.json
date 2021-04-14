@@ -104,6 +104,10 @@
           "options": {
             "browserTarget": "MemoryGame:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
