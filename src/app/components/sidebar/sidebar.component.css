@@ -1,0 +1,19 @@
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(48, 47, 47);
+  overflow-x: hidden;
+  padding-top: 20px;
+  box-shadow: 10px 10px 10px rgb(72, 76, 80);
+}
+
+h3, li{
+  text-align: center;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: #fcfcfc;
+  text-shadow: 0 0 50px #fff;
+}

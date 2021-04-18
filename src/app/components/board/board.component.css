@@ -1,0 +1,48 @@
+.bulb {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 10px;
+}
+.bulb:hover {
+  box-shadow: 0 0 50px #fff, 10px 0 50px rgb(158, 175, 190);
+  cursor: pointer;
+}
+
+.game-board {
+  margin: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  grid-template-rows: 120px 120px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  text-align: center;
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: #ffe7e6;
+  text-shadow: 0 0 50px #fff;
+}
+.restart-btn{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background-color: #ffe7e6;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 10px 27px;
+  border-radius: 10px;
+}
+.restart-btn:hover {
+  background-color: #33586d;
+  color: white;
+}
