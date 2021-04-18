@@ -34,10 +34,11 @@ import { ColorDirective } from "./../../directives/color.directive";
   `,
   styleUrls: ["./board.component.css"],
 })
-export class BoardComponent implements OnInit, AfterViewInit {
+export class BoardComponent implements OnInit {
   @ViewChildren(ColorDirective) colorDirectives = null;
   board: Array<LightBulb> = [];
   BORAD_LENGTH: number = 6;
+  
 
   constructor(
     public boardService: BoardService,
@@ -50,16 +51,9 @@ export class BoardComponent implements OnInit, AfterViewInit {
     if (username !== "") {
       this.createBoard();
       this.boardService.appendSequence();
-      this.boardService.sequence$.subscribe((val) => console.log(val));
     } else {
       this.router.navigateByUrl("/wellcome");
     }
-  }
-
-  ngAfterViewInit(): void {
-    this.colorDirectives.forEach((el) => {
-      console.log(el.bulb.color);
-    });
   }
 
   createBoard(): void {
@@ -72,6 +66,7 @@ export class BoardComponent implements OnInit, AfterViewInit {
   }
 
   async glowSequence(): Promise<void> {
+
     for (let val of this.boardService.seq) {
       let bulb = this.colorDirectives.find(
         (bulb) => Number(bulb.el.nativeElement.id) === val

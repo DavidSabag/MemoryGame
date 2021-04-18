@@ -34,5 +34,8 @@ export class BoardService {
   isClicksEquelsLen(): boolean{
     return this.clickCount === this.seq.length - 1;
   }
+  ngOnDestroy() {
+    this._sequence.unsubscribe();
+  }
 
 }

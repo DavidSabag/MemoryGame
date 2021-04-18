@@ -22,6 +22,7 @@ export class ColorDirective {
       await new Promise((r) => setTimeout(r, 2000)); //sleep
       await this.boardComponent.glowSequence()
       this.boardService.appendSequence();
+
     } else {
       this.glow(1000);
       this.isCorrectOrder()

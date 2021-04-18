@@ -10,6 +10,7 @@ export class UserService {
   bestScore: number = 0;
   isLost: boolean = false;
   scoreHistory: Array<number> = [];
+  isReset: boolean = false
   constructor(private boardService: BoardService) {}
 
   set setUserName(name: string) {
@@ -34,7 +35,10 @@ export class UserService {
     this.currScore = 0;
     this.isLost = false;
     this.boardService.seq = [];
-    this.boardService.appendSequence();
     this.boardService.clickCount = 0;
+    this.boardService.appendSequence();
+    this.isReset = true;
+    
+    
   }
 }
